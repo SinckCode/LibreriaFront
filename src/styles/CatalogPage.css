@@ -1,0 +1,250 @@
+.catalog-container {
+  background-color: #ffe6f0;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.catalog-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #b4005c;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.catalog-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.catalog-search {
+  padding: 0.5rem 1rem;
+  width: 80%;
+  max-width: 300px;
+  border: 2px solid #ff99cc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.admin-toggle {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #880e4f;
+  font-size: 0.95rem;
+}
+
+.admin-toggle input {
+  margin-right: 0.5rem;
+}
+
+.logout-button {
+  background-color: #ef0381;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c4026a;
+}
+
+.admin-add-button {
+  background-color: #ff80ab;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  transition: background-color 0.3s ease;
+}
+
+.admin-add-button:hover {
+  background-color: #e91e63;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.catalog-card {
+  background-color: #fff0f5;
+  border: 1px solid #ffb6c1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.catalog-card:hover {
+  transform: scale(1.02);
+}
+
+.catalog-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #ffb6c1;
+}
+
+.catalog-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.catalog-info strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #880e4f;
+  margin-bottom: 0.5rem;
+}
+
+.catalog-info p {
+  font-size: 0.9rem;
+  color: #6a1b9a;
+  margin: 0;
+}
+
+/* === Modal === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #ef0381;
+  cursor: pointer;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* === Formulario Admin === */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.admin-form input,
+.admin-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffb6c1;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.admin-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.admin-submit-button {
+  background-color: #ef0381;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-submit-button:hover {
+  background-color: #c4026a;
+}
+
+/* === Errores de validación === */
+.validation-error {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.3rem;
+  padding-left: 0.5rem;
+  font-weight: 500;
+}
+
+
+/* === Botones Admin dentro de cada tarjeta === */
+.admin-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button {
+  background-color: #ffccdd;
+  color: #880e4f;
+}
+
+.edit-button:hover {
+  background-color: #f8a7c0;
+}
+
+.delete-button {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
+
+.delete-button:hover {
+  background-color: #e57373;
+}
