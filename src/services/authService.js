@@ -18,7 +18,7 @@ export async function login(email, password) {
       throw new Error("Credenciales incorrectas");
     }
 
-    return data; // { token: "..." }
+    return data;
   } catch (error) {
     throw new Error("Error al conectar con el servidor");
   }
